@@ -10,9 +10,9 @@ body{
 .main-header{
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    /* width: 900px; */
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 20%;
 }
 .main-header ul{
     list-style: none;
@@ -43,21 +43,72 @@ body{
     justify-content: center;
     align-items: center;
 }
-.home-main-text h1{
+.home-main-text h1, .home-main-contact h1{
     font-size: 48px;
     font-weight: 400;
-    width: 852px;
+    width: 60%;
+    /* padding: 20%; */
     text-align: center;
 }
 .home-main-text h1 span{
     background-color: #fcf5e9;
+}
+.home-main-contact{
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+}
+.home-main-contact h1{
+    color: white;
+}
+.home-main-contact h1 span{
+    color: black;
+    background-color: #fcf5e9;
+}
+
+.contact-us-form input, textarea{
+    width: 100%;
+    padding: 16px 0;
+    margin-bottom: 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border-bottom: 1px solid #383737;
+   
+}
+.contact-us-form textarea{
+    height: 200px;
+}
+.contact-team{
+    margin: 40px auto;
+    /* padding: 0rem 4rem; */
+    /* width: 900px; */
+    width: 55%;
+}
+.contact-us-form{
+    margin: 0 0 100px ;
+}
+#submit{
+    background-color: #fff;
+    border: 1px solid #383737;
+    margin-top: 10px;
+}
+.contact-team h2{
+    text-align: center;
+    font-size: 25.6px;
+    margin-bottom: 40px;
+}
+.contact-team p{
+    text-align: center;
+    margin-bottom: 32px;
 }
 .gallary{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
-    unicode-bidi: isolate;
     margin-bottom: 40px;
     padding: 0 100px;
 }
@@ -77,9 +128,7 @@ body{
 .about-service{
     background-color: #333;
     color: white;
-    padding: 3rem 4rem;
-
-    
+    padding: 3rem 4rem; 
 }
 .about-service div{
     flex: 1;
@@ -104,6 +153,7 @@ body{
     margin: 40px auto;
     padding: 0rem 4rem;
 }
+
 .about-team h2{
     text-align: center;
     font-size: 25.6px;
@@ -112,7 +162,7 @@ body{
     display: flex;
     width: 100%;
     gap: 20px;
-    padding: 2.5rem 1.5rem;
+    padding: 3% 2.5%;
     
 }
 .about-team-details img{
@@ -127,7 +177,16 @@ footer{
 .main-footer{
     display: flex;
     justify-content: space-between;
-    width: 1080px;
+    /* width: 1080px; */
+    padding:0 15%;
+    margin: 40px auto;
+    align-items: center;
+}
+.main-footer-about{
+    display: flex;
+    justify-content: space-between;
+    /* width: 1080px; */
+    padding:0 15%;
     margin: 40px auto;
     align-items: center;
 }
@@ -141,8 +200,93 @@ footer{
 .footer-3 ul{
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 .footer-3 ul li i{
     font-size: 32px;
     color: #333333f2;
+}
+@media all and (max-width: 770px){
+    .main-header{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .main-header img{
+        margin-bottom: 20px;
+    }
+    .home-main-text{
+        width: 100%;
+    }
+    .home-main{
+        width: 100%;
+        height: 100%;
+       margin: -20% auto;
+    }
+    .home-main-text h1{
+        font-size: 28px;
+        width: 90%;
+        
+    }
+    .gallary{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: -15%;
+        margin-bottom: 25%;
+        align-content: center;
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    
+    .about-service{
+        margin-top: -15%;
+        width: 100%;
+        
+    }
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        width: 100%;
+    }
+    .about-team-details{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-team-details img{
+        width: 100%;
+        padding: 1% 0%;
+    }
+    .main-footer-about{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    .about-foo{
+        margin-top: 25%;
+    }
+    .home-main-contact{
+        margin-top: 20%;
+        height: 300px;
+    }
+    .home-main-contact h1{
+        font-size: 28px;
+        width: 90%;
+        
+    }
+    .contact-team{
+        width: 98%;
+        margin-bottom: 30%;
+    }
 }
